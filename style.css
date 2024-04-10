@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+[data-contexto="estudar"]{
+ background-image: url('./imgs/screenshot_23135.png');
+}
+
+[data-contexto="descanso-curto"]{
+  background-image: url('./imgs/screenshot_232532.png');
+}
+
+[data-contexto="descanso-longo"]{
+  background-image: url('./imgs/screenshot_231820.png');
+}
+
+*{
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+html{
+  min-height: 100vh;
+}
+
+body{
+  font-family: "Saira Semi Condensed", sans-serif;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__container{
+  display: flex;
+  justify-content: center;
+}
+
+.app__card{
+  border-radius: 3.2rem;
+  border: 0.2rem solid;
+  background-color: #a9a9a9;
+  padding: 2.4rem;
+  margin: 8rem 0;
+  width: 50rem;
+  max-width: 90%;
+}
+
+.app__card-list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+}
+
+.app__card-button{
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  background: none;
+  padding: 0.8rem;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.app__card-button.active{
+  border-radius: 0.8rem;
+  background-color:#000;
+  font-weight: 600;
+}
+
+.start{
+    text-align: center;
+}
+
+.start__button{
+  all: unset;
+  cursor: pointer;
+  font-family: "Saira Semi Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color:#ffffff;
+}
+
+.app__card-timer{
+  color: #ffffff;
+  text-align: center;
+  font-family: "Saira Semi Condensed", sans-serif;
+  font-size: 12rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 3.2rem;
+  text-align: center;
+}
+
+.app__card-list-label{
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.app__card-primary-button{
+  padding: 0.8rem;
+  width: 12rem;
+  border: none;
+  cursor: pointer;
+  outline: inherit;
+  border-radius: 3.2rem;
+  margin-top: 3.2rem;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/*toggle*/
+.toggle{
+  cursor: pointer;
+  display: inline-block;
+}
+
+.toggle-switch{
+  display: inline-block;
+  background: #ccc;
+  border-radius: 1.6rem;
+  width: 5.8rem;
+  height: 3.2rem;
+  position: relative;
+  vertical-align: middle;
+  transition: background 0.25s;
+}
+
+.toggle-switch:before, .toggle-switch:after{
+  content: "";
+}
+
+.toggle-switch:before{
+  display: block;
+  background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+  border-radius: 50%;
+  width: 2.4rem;
+  height: 2.4rem;
+  position: absolute;
+  top: 0.4rem;
+  left: 0.4rem;
+  transition: left 0.25s;
+}
+
+.toggle:hover .toggle-switch:before{
+  background: linear-gradient(to bottom, #fff 0%, #fff 100%);
+}
+
+.toggle-checkbox:checked + .toggle-switch{
+  background: #00FF7F;
+}
+
+.toggle-checkbox:checked + .toggle-switch:before{
+  left: 3rem;
+}
+
+.toggle-checkbox{
+  position: absolute;
+  visibility: hidden;
+}
+

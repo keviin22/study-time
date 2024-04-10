@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-contexto="estudar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Study</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <main class="app">
+        <section class="header">
+            <h1 class="titulo">Estude</h1>
+            <figure class="logo-the-witcher">
+                <img class="logo-the-witcher-imagem"
+                    src="./imgs/kisspng-blood-of-elves-the-witcher-3-wild-hunt-logo-brand-twg-lord-strell-presents-witcher-3-wild-hunt-5b8aebd39f3783 1.svg"
+                    alt="Logo The Witcher 3">
+            </figure>
+        </section>
+        <section class="card__container">
+            <div class="app__card">
+                <ul class="app__card-list">
+                    <li class="app__card-list-item">
+                        <button data-contexto="estudar" class="app__card-button app__card-button--estudar active">Estudar</button>
+                    </li>
+                    <li class="app__card-list-item">
+                        <button data-contexto="short" class="app__card-button app__card-button--curto">Descanso Curto</button>
+                    </li>
+                    <li class="app__card-list-item">
+                        <button data-contexto="long" class="app__card-button app__card-button--longo">Descanso Longo</button>
+                    </li>
+                </ul>
+                <div id="timer" class="app__card-timer"></div>
+                <ul class="app__card-list">
+                    <li class="app__card-list-item">
+                        <label class="toggle">
+                            <input class="toggle-checkbox" type="checkbox" id="alternar-musica">
+                            <div class="toggle-switch"></div>
+                        </label>
+                    </li>
+                    <li class="app__card-list-item">
+                        <label class="app__card-list-label" for="alternar-musica">
+                            Música
+                        </label>
+                    </li>
+                </ul>
+                <div class="app__card-primary-button-wrapper">
+                    <button id="start-pause" class="app__card-primary-button">
+                        <img class="app__card-primary-butto-icon" src="/imagens/play_arrow.png" alt="">
+                        <span>Começar</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>
