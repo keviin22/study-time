@@ -176,3 +176,7 @@ body{
   visibility: hidden;
 }
 
+.app__card-primary-button-wrapper{
+  display: flex;
+  justify-content: center;
+}
