@@ -4,6 +4,10 @@ const curtoBt = document.querySelector('.app__card-button--curto')
 const longoBt = document.querySelector('.app__card-button--longo')
 const titulo = document.querySelector('.titulo')
 const botoes = document.querySelectorAll('.app__card-button')
+const startPauseBt = document.querySelector('#start-pause')
+
+let tempoDecorridoEmSegundos = 5
+let inetervaloId = null
 
 estudarBt.addEventListener('click', () => {
     alterarContexto('estudar')
@@ -42,3 +46,29 @@ function alterarContexto(contexto){ //esta função vai alterar os fundos e titu
     }
 }
 
+//funcão que irá fazer a contagem regressiva
+const contagemRegressiva = () => {
+    //iniciar()
+    if (tempoDecorridoEmSegundos <= 0){
+        zerar()
+        alert('Tempo Finalizado!')
+        return
+    }
+    tempoDecorridoEmSegundos -= 1
+    console.log('temporizador: ' + tempoDecorridoEmSegundos)
+}
+
+startPauseBt.addEventListener('click', iniciarOuPausar)
+
+function iniciarOuPausar(){
+    if (inetervaloId){
+        zerar()
+        return
+    }
+    inetervaloId = setInterval(contagemRegressiva, 1000)
+}
+
+function zerar (){
+    clearInterval(inetervaloId)
+    inetervaloId = null
+}
