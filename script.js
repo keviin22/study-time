@@ -6,6 +6,11 @@ const titulo = document.querySelector('.titulo')
 const botoes = document.querySelectorAll('.app__card-button')
 const startPauseBt = document.querySelector('#start-pause')
 
+const iniciarOuPausarBt = document.querySelector('#start-pause span')
+
+const audioPlay = new Audio('/songs/quest_accept_tw3.mp3')
+const audioPausa = new Audio('/songs/quest_complete_tw3.mp3')
+
 let tempoDecorridoEmSegundos = 5
 let inetervaloId = null
 
@@ -50,8 +55,8 @@ function alterarContexto(contexto){ //esta função vai alterar os fundos e titu
 const contagemRegressiva = () => {
     //iniciar()
     if (tempoDecorridoEmSegundos <= 0){
-        zerar()
         alert('Tempo Finalizado!')
+        zerar()
         return
     }
     tempoDecorridoEmSegundos -= 1
@@ -62,9 +67,11 @@ startPauseBt.addEventListener('click', iniciarOuPausar)
 
 function iniciarOuPausar(){
     if (inetervaloId){
+        audioPausa.play()
         zerar()
         return
     }
+    audioPlay.play()
     inetervaloId = setInterval(contagemRegressiva, 1000)
 }
 
