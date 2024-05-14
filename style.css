@@ -19,9 +19,6 @@
 
 html{
   min-height: 100vh;
-}
-
-body{
   font-family: "Saira Semi Condensed", sans-serif;
   background-size: cover;
   background-repeat: no-repeat;
