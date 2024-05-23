@@ -2,14 +2,23 @@
 
 [data-contexto="estudar"]{
  background-image: url('./imgs/screenshot_23135.png');
+ .titulo{
+  color: #ffffff;
+ }
 }
 
 [data-contexto="descanso-curto"]{
   background-image: url('./imgs/screenshot_232532.png');
+  .titulo{
+    color: #000000;
+  }
 }
 
 [data-contexto="descanso-longo"]{
   background-image: url('./imgs/screenshot_231820.png');
+  .titulo{
+    color: #ffffff;
+  }
 }
 
 *{
@@ -28,8 +37,13 @@ html{
 
 .header{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+}
+
+.titulo{
+  color: #00FF7F;
+  font-size: 3.5rem;
 }
 
 .card__container{
@@ -43,7 +57,7 @@ html{
   background-color: #a9a9a9;
   padding: 2.4rem;
   margin: 8rem 0;
-  width: 50rem;
+  width: 59rem;
   max-width: 90%;
 }
 
@@ -93,12 +107,14 @@ html{
   color: #ffffff;
   text-align: center;
   font-family: "Saira Semi Condensed", sans-serif;
-  font-size: 12rem;
+  font-size: 10rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin: 3.2rem;
+  margin: 1rem;
   text-align: center;
+  height: 15.6rem;
+  width: 50rem;
 }
 
 .app__card-list-label{
@@ -176,4 +192,5 @@ html{
 .app__card-primary-button-wrapper{
   display: flex;
   justify-content: center;
+  align-items: center;
 }
